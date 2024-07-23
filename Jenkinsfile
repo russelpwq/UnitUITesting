@@ -8,6 +8,7 @@ pipeline {
 					steps {
                     // Remove existing container if it exists
                     sh 'docker rm -f my-apache-php-app || true'
+                    sh 'docker rm -f test-app || true'
 
                     // Stop any container using port 80
                     sh '''
